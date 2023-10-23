@@ -1,6 +1,7 @@
 package UserResources;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,7 +12,7 @@ import domain.User;
 import service.UserService;
 
 @RestController
-@RequestMapping("/USER")
+@RequestMapping(value = "/user")
 public class UserResource {
 
 	@Autowired
@@ -19,6 +20,6 @@ public class UserResource {
 
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<User> findById(@PathVariable Integer id) {
-		return ResponseEntity.ok().body(service.findById(id));
+		return ResponseEntity.ok().body(service.FindById(id));
 	}
 }
