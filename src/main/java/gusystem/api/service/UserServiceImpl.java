@@ -1,25 +1,19 @@
-package service.service;
+package gusystem.api.service;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import Repository.GuRepository;
-import domain.User;
-import service.UserService;
+import gusystem.api.domain.User;
+import gusystem.api.repository.GuRepository;
 
-@Service
-public class UserServiceImpl implements UserService {
-	
+public class UserServiceImpl {
 	@Autowired
 	private GuRepository repository;
 
-	
-	@Override
+	@Autowired
 	public User FindById(Integer id) {
 		Optional<User> obj = repository.findById(id);
 		return obj.orElse(null);
 	}
-
 }

@@ -1,15 +1,15 @@
-package UserResources;
+package gusystem.api.UserResources;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import domain.User;
-import service.UserService;
+import gusystem.api.domain.User;
+import gusystem.api.service.service.UserService;
+
 
 @RestController
 @RequestMapping(value = "/user")
