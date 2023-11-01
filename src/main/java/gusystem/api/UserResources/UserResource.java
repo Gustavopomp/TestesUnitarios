@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 import gusystem.api.domain.User;
 import gusystem.api.service.service.UserService;
 
-
 @RestController
 @RequestMapping(value = "/user")
 public class UserResource {
 
-	@Autowired
+	
+	@Autowired 
 	private UserService service;
 
 	@GetMapping(value = "/{id}")

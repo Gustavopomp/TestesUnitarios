@@ -16,12 +16,25 @@ import lombok.NoArgsConstructor;
 @Entity
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private String name;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	private String name;
 
-    @Column(unique = true)
-    private String email;
-    private String password;
+	@Column(unique = true)
+	private String email;
+	private String password;
+
+	public User() {
+	}
+	
+	public User(Integer id, String name, String email, String password) {
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.password = password;
+	}
+
+	
+
 }
